@@ -1,0 +1,192 @@
+:root {
+  --text: #ffffff;
+  --highlight: #FFFFFF;
+  --accent: #ff0000;
+  --bg-dark: #000000;
+  --bg-darker: #000000;
+  --bg-overlay: rgba(0, 0, 35, 0.6);
+  --border: #000000;
+  --shadow: 0 0 15px rgba(10, 250, 140, 0.6);
+  --shadow-highlight: 0 0 30px rgba(0, 0, 0, 1);
+  --shadow-hover: 0 0 10px;
+  --radius: 20px;
+  --padding: 15px;
+  --margin: 40px;
+  --font: Arial, sans-serif;
+  --transition: all 0.02s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  margin: var(--margin);
+  z-index: 0;
+}
+
+body::before,
+canvas {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes hueShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: var(--highlight);
+  text-shadow: var(--shadow-hover);
+  text-align: center;
+  transition: var(--transition);
+}
+
+header,
+footer {
+  background: var(--bg-darker); /* Dark background for header and footer */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow); /* Same shadow as main page sections */
+  padding: var(--padding); /* Same padding as main page sections */
+  margin-top: var(--margin);
+  text-align: center;
+  transition: var(--transition);
+}
+
+header:hover,
+footer:hover {
+  box-shadow: var(--shadow-hover); /* Same hover effect */
+}
+
+section,
+video {
+  background: var(--bg-overlay); /* Overlay background for sections */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow); /* Same shadow as main page sections */
+  padding: var(--padding); /* Same padding as main page sections */
+  margin-top: var(--margin);
+  text-align: left;
+  transition: var(--transition);
+}
+
+section:hover,
+video:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  padding: var(--padding);
+  border-radius: var(--radius);
+  background: var(--bg-darker);
+  transition: var(--transition);
+  text-align: center;
+}
+
+a:hover {
+  background: var(--accent);
+}
+
+li {
+  margin: var(--margin);
+  background: var(--bg-dark);
+  padding: var(--padding);
+  border-radius: var(--radius);
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: var(--bg-dark);
+  margin: var(--margin) 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: var(--padding);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+th {
+  color: var(--highlight);
+  background: var(--bg-dark);
+}
+
+img {
+  display: block;
+  margin: var(--margin) auto;
+  width: 50%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.play-now-btn {
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+.play-now-btn:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: calc(var(--margin) / 2);
+  }
+  img {
+    width: 100%;
+  }
+  header,
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+@font-face { font-family: Determination; src: url('https://cdn.glitch.global/1c54905a-4836-46e9-a03d-4344d5ced512/determination-max.otf.woff2?v=1744639375730'); }
+  .determinationFont {
+    font-family: Determination
+  }
+
+@font-face { font-family: PapyrusUndertale; src: url('https://cdn.glitch.global/1c54905a-4836-46e9-a03d-4344d5ced512/papyrus-font-undertale.otf.woff2?v=1744640418507'); } 
+  .papyrusFont {
+    font-family: PapyrusUndertale
+  }
+      
+@font-face { font-family: SansUndertale; src: url('https://cdn.glitch.global/1c54905a-4836-46e9-a03d-4344d5ced512/pixel-comic-sans-undertale-sans-font.otf.woff2?v=1744640424086'); } 
+  .sansFont {
+      font-family: SansUndertale
+  }
+
+.theRedColor {
+    color: #ff0000;
+}
+.sizeTheFonts {
+    font-size: 20px;
+}
